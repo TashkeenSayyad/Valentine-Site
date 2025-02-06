@@ -10,24 +10,25 @@ body {
   min-height: 100vh;
   overflow: hidden;
   padding: 20px;
+  position: relative;
 }
 
 /* Main Content Container */
 .container {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 20px;
-  border-radius: 25px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.25);
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
   text-align: center;
   transition: all 0.3s ease;
 }
 
 /* Heading */
 h1 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
   animation: fadeIn 1s ease-in-out;
@@ -44,27 +45,26 @@ h1 {
 
 /* Button Styling */
 button {
-  font-size: 16px;
-  padding: 12px 24px;
+  font-size: 18px;
+  padding: 12px 28px;
   border: none;
   cursor: pointer;
   border-radius: 30px;
   transition: all 0.3s ease;
   font-weight: 600;
   outline: none;
-  flex: 1 1 45%;
 }
 
 /* Yes Button */
 .yesButton {
   background: #7d3cff;
   color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .yesButton:hover {
   background: #682ecc;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 /* No Button */
@@ -72,12 +72,14 @@ button {
   background: white;
   color: #7d3cff;
   border: 2px solid #7d3cff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .noButton:hover {
-  background: #f5f0ff;
-  transform: scale(0.95);
+  background: white;
+  /* No color change */
+  transform: none;
+  /* No scaling */
 }
 
 /* Fade-In Animation */
@@ -102,12 +104,12 @@ button {
 
 .gif_container img {
   width: 100%;
-  max-width: 350px;
+  max-width: 360px;
   border-radius: 15px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Floating Roses (Only for Yes Page) */
+/* Floating Roses Effect */
 .roses-container {
   position: fixed;
   top: 0;
@@ -121,23 +123,27 @@ button {
 
 .rose {
   position: absolute;
-  font-size: 2rem;
-  animation: float 12s infinite ease-in;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
   opacity: 0;
+  animation: float 6s infinite ease-in-out;
   user-select: none;
 }
 
+/* Floating Animation */
 @keyframes float {
   0% {
     transform: translateY(100vh) rotate(0deg);
     opacity: 0;
   }
 
-  20% {
+  10% {
     opacity: 1;
   }
 
-  80% {
+  90% {
     opacity: 1;
   }
 
@@ -156,8 +162,8 @@ button {
 
   button {
     flex: 1 1 100%;
-    font-size: 14px;
-    padding: 10px 20px;
+    font-size: 16px;
+    padding: 12px 24px;
   }
 
   .gif_container img {
