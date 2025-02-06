@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Yes, I'll be your Valentine!</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Only the GIF container (no roses here) -->
-  <div class="gif_container" id="gifContainer">
-    <img src="https://media1.giphy.com/media/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="Cute GIF">
-  </div>
-  <script src="yesPage.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="A beautiful surprise for saying YES! 💜"
+    />
+    <meta name="author" content="Your Name" />
+    <title>You Said Yes! 💜</title>
+
+    <!-- Preload GIF for faster display -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://media1.giphy.com/media/VM1fcpu2bKs1e2Kdbj/giphy.gif"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <!-- JavaScript -->
+    <script defer src="yesPage.js"></script>
+  </head>
+  <body>
+    <!-- Animated Roses Background -->
+    <div class="roses-container" id="rosesContainer"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+      <h1>Yay! You said yes! 💖</h1>
+
+      <!-- Happy GIF -->
+      <div class="gif_container">
+        <img
+          src="https://media1.giphy.com/media/VM1fcpu2bKs1e2Kdbj/giphy.gif"
+          alt="A happy celebratory GIF"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </body>
 </html>
