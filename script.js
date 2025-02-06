@@ -18,7 +18,7 @@ function handleNoClick() {
   const noButton = document.querySelector(".noButton");
   const yesButton = document.querySelector(".yesButton");
 
-  if (noClickCount < messages.length - 1) {
+  if (noClickCount < messages.length) {
     noButton.textContent = messages[messageIndex];
     messageIndex = (messageIndex + 1) % messages.length;
     noClickCount++;
