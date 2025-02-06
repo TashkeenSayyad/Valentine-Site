@@ -6,12 +6,61 @@
     <title>Knew you would say yes!</title>
     <link rel="stylesheet" href="styles/yes_style.css">
 </head>
+<style>
+
+    .roses-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .rose {
+        position: absolute;
+        font-size: 2rem; 
+        animation: float 8s infinite ease-in;
+        opacity: 0;
+        user-select: none;
+    }
+
+    .rose img {
+        width: 40px; 
+        height: auto;
+        filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.5));
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(100vh) rotate(0deg);
+            opacity: 0;
+        }
+        20% {
+            opacity: 1;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-100vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+</style>
+
+<!-- <script src="script.js"></script> -->
 <body>
     <div class="container">
         <h1 class="header_text">Knew you would say yes!</h1>
         <div class="gif_container">
             <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDdmd3l1ZTkwYzNocjVxYnV0bW5kdjRwbmFicjk2MXZxZG1hbW51OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XaikVL6qbrJSJoQmCR/giphy.gif">
         </div>
+        <div id="rosesContainer"></div>
+        <script src="script.js"></script>
+        <script>animateRoses();</script>
     </div>
 </body>
 </html>

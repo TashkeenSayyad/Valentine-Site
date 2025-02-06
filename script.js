@@ -45,8 +45,8 @@ function animateRoses() {
 }
 
 function handleNoClick() {
-    const noButton = document.querySelector('.no-button');
-    const yesButton = document.querySelector('.yes-button');
+    const noButton = document.querySelector('.noButton');
+    const yesButton = document.querySelector('.yesButton');
 
     if (noClickCount < messages.length - 1) {
         noButton.textContent = messages[messageIndex];
@@ -89,6 +89,7 @@ function handleYesClick() {
                      style="max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 10px;">
             </div>
         `;
-        animateRoses();
     }, 300);
+// Add event listener for the "Yes" button
+document.getElementById('yesButton').addEventListener('click', handleYesClick);
 }
