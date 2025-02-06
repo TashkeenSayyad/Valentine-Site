@@ -89,11 +89,8 @@ function handleYesClick() {
     // Add smooth transition
     container.style.opacity = '0';
     container.style.transform = 'translateY(-20px)';
-    
-    animateRoses();
-
     setTimeout(() => {
-        container.style.display = 'none';
+        // container.style.display = 'none';
         gifContainer.style.display = 'block';
         gifContainer.innerHTML = `
             <div style="
@@ -113,5 +110,6 @@ function handleYesClick() {
                      style="max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 10px;">
             </div>
         `;
+        animateRoses();
     }, 300); // Match transition duration
 }
