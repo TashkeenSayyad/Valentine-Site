@@ -36,3 +36,18 @@ function handleYesClick() {
   // Redirect to the yes page where the celebration GIF will appear
   window.location.href = "yesPage.html";
 }
+
+// Firefly effect
+document.addEventListener("DOMContentLoaded", () => {
+  const fireflyContainer = document.createElement("div");
+  fireflyContainer.classList.add("fireflies-container");
+  document.body.appendChild(fireflyContainer);
+
+  for (let i = 0; i < 25; i++) {
+    const firefly = document.createElement("div");
+    firefly.classList.add("firefly");
+    firefly.style.left = `${Math.random() * 100}vw`;
+    firefly.style.top = `${Math.random() * 75}vh`;
+    fireflyContainer.appendChild(firefly);
+  }
+});

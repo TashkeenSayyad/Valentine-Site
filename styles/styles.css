@@ -19,7 +19,7 @@ body {
   padding: 25px;
   border-radius: 20px;
   backdrop-filter: blur(20px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(51, 0, 71, 0.874);
   width: 100%;
   max-width: 420px;
   text-align: center;
@@ -72,14 +72,12 @@ button {
   background: white;
   color: #7d3cff;
   border: 2px solid #7d3cff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(47, 0, 52, 0.696);
 }
 
 .noButton:hover {
   background: white;
-  /* No color change */
   transform: none;
-  /* No scaling */
 }
 
 /* Fade-In Animation */
@@ -109,50 +107,6 @@ button {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Floating Roses Effect */
-.roses-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.rose {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0;
-  animation: float 6s infinite ease-in-out;
-  user-select: none;
-}
-
-/* Floating Animation */
-@keyframes float {
-  0% {
-    transform: translateY(100vh) rotate(0deg);
-    opacity: 0;
-  }
-
-  10% {
-    opacity: 1;
-  }
-
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(-100vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
 /* Responsive Improvements */
 @media (max-width: 500px) {
   .container {
@@ -168,5 +122,73 @@ button {
 
   .gif_container img {
     max-width: 280px;
+  }
+}
+
+/* Firefly Effect */
+.fireflies-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.firefly {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(255, 196, 0);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fireflyGlow 3s infinite alternate ease-in-out, fireflyMove 8s infinite linear;
+}
+
+@keyframes fireflyGlow {
+  0% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Daisies Background */
+.daisy-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.daisy {
+  position: absolute;
+  font-size: 2rem;
+  /* Bigger daisy size */
+  animation: floatDaisy 8s linear infinite;
+  opacity: 0;
+  user-select: none;
+}
+
+@keyframes floatDaisy {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
   }
 }
