@@ -29,7 +29,7 @@ function handleNoClick() {
 
   // Increase the Yes button's font size for a fun effect
   const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-  yesButton.style.fontSize = `${currentSize * 1.3}px`;
+  yesButton.style.fontSize = `${currentSize * 1.25}px`;
 }
 
 function handleYesClick() {
