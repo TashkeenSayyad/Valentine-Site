@@ -3,14 +3,14 @@ function createRoses() {
   const rosesContainer = document.getElementById("rosesContainer");
   if (!rosesContainer) return;
 
-  const numberOfRoses = 5; // Limit the number of roses
+  const numberOfRoses = 1; // Limit the number of roses
   rosesContainer.innerHTML = ""; // Clear existing roses
 
   for (let i = 0; i < numberOfRoses; i++) {
     const rose = document.createElement("div");
     rose.className = "rose";
     rose.style.left = `${Math.random() * 100}%`;
-    rose.style.animationDelay = `${Math.random() * 2}s`; // More staggered appearance
+    rose.style.animationDelay = `2s`; // More staggered appearance
     rose.innerHTML = "🌹";
     rosesContainer.appendChild(rose);
   }
@@ -31,4 +31,4 @@ window.addEventListener("DOMContentLoaded", () => {
       gifContainer.style.opacity = "1";
     }, 200);
   }
-});
+}); 
