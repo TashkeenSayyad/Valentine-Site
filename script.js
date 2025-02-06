@@ -14,7 +14,58 @@ const messages = [
 let messageIndex = 0;
 let noClickCount = 0;
 
-function handleNoClick() {
+        // Roses generation
+        function createRoses() {
+            const rosesContainer = document.getElementById('rosesContainer');
+            const numberOfRoses = 1;
+
+            for (let i = 0; i < numberOfRoses; i++) {
+                const rose = document.createElement('div');
+                rose.className = 'rose';
+                rose.style.left = `${Math.random() * 100}%`;
+                rose.style.animationDelay = `${Math.random() * 1}s`;
+                rose.style.fontSize = `${Math.random() * 20 + 20}px`; // Random size for emoji roses
+                rose.style.color = `hsl(${Math.random() * 360}, 70%, 60%)`;
+
+                // Use rose emoji or image
+                if (Math.random() > 0.5) {
+                    rose.innerHTML = '🌹'; // Rose emoji
+                } else {
+                    // rose.innerHTML = `<img src="documents/rosepic.." alt="Rose">`; // Rose image
+                }
+
+                rosesContainer.appendChild(rose);
+            }
+        }
+        // Roses generation
+        function createRoses() {
+            const rosesContainer = document.getElementById('rosesContainer');
+            const numberOfRoses = 1;
+
+            for (let i = 0; i < numberOfRoses; i++) {
+                const rose = document.createElement('div');
+                rose.className = 'rose';
+                rose.style.left = `${Math.random() * 100}%`;
+                rose.style.animationDelay = `${Math.random() * 1}s`;
+                rose.style.fontSize = `${Math.random() * 20 + 20}px`; // Random size for emoji roses
+                rose.style.color = `hsl(${Math.random() * 360}, 70%, 60%)`;
+
+                // Use rose emoji or image
+                if (Math.random() > 0.5) {
+                    rose.innerHTML = '🌹'; // Rose emoji
+                } else {
+                    // rose.innerHTML = `<img src="documents/rosepic.." alt="Rose">`; // Rose image
+                }
+
+                rosesContainer.appendChild(rose);
+            }
+        }
+    function animateRoses() {
+        createRoses();
+        requestAnimationFrame(animateRoses);
+    }
+
+    function handleNoClick() {
     const noButton = document.querySelector('.no-button');
     const yesButton = document.querySelector('.yes-button');
     
@@ -30,7 +81,6 @@ function handleNoClick() {
     yesButton.style.fontSize = `${currentSize * 1.2}px`;
 }
 
-// ... (keep previous messages array and variables) ...
 
 function handleYesClick() {
     const container = document.querySelector('.container');
@@ -40,6 +90,8 @@ function handleYesClick() {
     container.style.opacity = '0';
     container.style.transform = 'translateY(-20px)';
     
+    animateRoses();
+
     setTimeout(() => {
         container.style.display = 'none';
         gifContainer.style.display = 'block';
