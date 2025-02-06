@@ -1,34 +1,28 @@
-// Function to create and animate floating rose emojis
-function createRoses() {
-  const rosesContainer = document.getElementById("rosesContainer");
-  if (!rosesContainer) return;
+document.addEventListener("DOMContentLoaded", () => {
+  const flowersContainer = document.getElementById("daisyContainer");
 
-  const numberOfRoses = 1; // Limit the number of roses
-  rosesContainer.innerHTML = ""; // Clear existing roses
+  function createDaisy() {
+    const daisy = document.createElement("div");
+    daisy.classList.add("daisy");
+    daisy.innerHTML = "🌼"; // Using the daisy emoji
 
-  for (let i = 0; i < numberOfRoses; i++) {
-    const rose = document.createElement("div");
-    rose.className = "rose";
-    rose.style.left = `${Math.random() * 100}%`;
-    rose.style.animationDelay = `2s`; // More staggered appearance
-    rose.innerHTML = "🌹";
-    rosesContainer.appendChild(rose);
-  }
-}
+    // Randomize position, delay, and size
+    const randomLeft = Math.random() * 100; // % of screen width
+    const randomDelay = Math.random() * 5; // Delay in seconds
+    const randomSize = Math.random() * 1.2 + 0.6; // Random scale between 0.6 and 1.8
 
-// Start the rose animation only if the container exists
-if (document.getElementById("rosesContainer")) {
-  setInterval(createRoses, 5000); // Slower rose animation
-}
+    daisy.style.left = `${randomLeft}vw`;
+    daisy.style.animationDelay = `${randomDelay}s`;
+    daisy.style.transform = `scale(${randomSize})`;
 
-// Fade in the GIF container when the page loads
-window.addEventListener("DOMContentLoaded", () => {
-  const gifContainer = document.getElementById("gifContainer");
-  if (gifContainer) {
-    gifContainer.style.opacity = "0";
-    gifContainer.style.transition = "opacity 1.5s ease-in-out";
+    flowersContainer.appendChild(daisy);
+
+    // Remove daisy after animation ends
     setTimeout(() => {
-      gifContainer.style.opacity = "1";
-    }, 200);
+      daisy.remove();
+    }, 8000); // Matches animation duration
   }
-}); 
+
+  // Generate new daisies every 1 second for a fuller effect
+  setInterval(createDaisy, 1000);
+});
