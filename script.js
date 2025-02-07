@@ -1,14 +1,21 @@
 const messages = [
-  "Are you sure?",
-  "Are you really sure??",
-  "Are you positive?",
-  "Nishu please...",
-  "Just think about it!",
-  "If you say no, I will be sad...",
-  "I will be very sad...",
-  "I will be very very very sad...",
-  "Ok fine, I will stop asking...",
-  "Just kidding, say yes please! ❤️",
+  "Wait... are you sure? 🤨",
+  "Are you really really sure??",
+  "Like, 100% sure? No take-backs?",
+  "Nishu please... think about it 💔",
+  "What if I say pretty please? 🥺",
+  "If you say no, I will be sad... 😢",
+  "I will be very sad... ",
+  "I will be very very very sad... 💔",
+  "My heart... it aches... 💘💔",
+  "Fine... I’ll respect your decision... 😔",
+  "Wait, no I won’t! Say yes please! ❤️",
+  "What if I get you daisies? 🌼",
+  "Or maybe another kitten? 🐱",
+  "Or BOTH?! 🌼🐱",
+  "You’re making this very difficult for me... 😭",
+  "Okay, last chance... pretty please? 🥺👉👈",
+  "Alright, I surrender...",
 ];
 
 let messageIndex = 0;
@@ -29,7 +36,7 @@ function handleNoClick() {
 
   // Increase the Yes button's font size for a fun effect
   const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-  yesButton.style.fontSize = `${currentSize * 1.25}px`;
+  yesButton.style.fontSize = `${currentSize * 1.15}px`;
 }
 
 function handleYesClick() {
