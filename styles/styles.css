@@ -140,7 +140,7 @@ button {
   position: absolute;
   width: 5px;
   height: 5px;
-  background-color: rgb(255, 196, 0);
+  background-color: rgb(93, 0, 255);
   border-radius: 50%;
   opacity: 0.8;
   animation: fireflyGlow 3s infinite alternate ease-in-out, fireflyMove 8s infinite linear;
@@ -157,8 +157,6 @@ button {
 }
 
 /* Daisies Background */
-
-/* More Daisies Falling 🌼 */
 .daisy-container {
   position: fixed;
   top: 0;
