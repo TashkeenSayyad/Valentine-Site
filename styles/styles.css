@@ -157,6 +157,8 @@ button {
 }
 
 /* Daisies Background */
+
+/* More Daisies Falling 🌼 */
 .daisy-container {
   position: fixed;
   top: 0;
@@ -170,9 +172,9 @@ button {
 
 .daisy {
   position: absolute;
-  font-size: 2rem;
-  /* Bigger daisy size */
-  animation: floatDaisy 8s linear infinite;
+  font-size: 2.2rem;
+  /* Bigger daisies */
+  animation: floatDaisy 7s linear infinite;
   opacity: 0;
   user-select: none;
 }
