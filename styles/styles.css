@@ -2,20 +2,18 @@
 body {
   font-family: 'SF Pro Display', sans-serif;
   text-align: center;
-  background-color: #b565d9 !important;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow-y: auto;
+  overflow: hidden;
   padding: 20px;
-  position: relative;
   background-image: url("https://tashkeensayyad.github.io/Valentine-Site/assets/background.png"),
     radial-gradient(circle, rgba(245, 83, 148, 0.8), rgba(153, 55, 234, 0.8));
-  background-color: transparent !important;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 /* Semi-transparent overlay for opacity */
