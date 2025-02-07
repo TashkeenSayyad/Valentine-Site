@@ -60,7 +60,7 @@ button {
 .yesButton {
   background: #e91e63;
   color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(51, 0, 71, 0.874);
 }
 
 .yesButton:hover {
@@ -73,7 +73,7 @@ button {
   background: white;
   color: #e91e63;
   border: 2px solid #e91e63;
-  box-shadow: 0 2px 8px rgba(47, 0, 52, 0.696);
+  box-shadow: 0 10px 30px rgba(51, 0, 71, 0.874);
 }
 
 .noButton:hover {
@@ -105,7 +105,6 @@ button {
   width: 100%;
   max-width: 360px;
   border-radius: 15px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Improvements */
@@ -228,4 +227,18 @@ button {
     transform: translateY(100vh) rotate(360deg);
     opacity: 0;
   }
+}
+
+/* GIF Container */
+.gif-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gif-container img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(51, 0, 71, 0.874);
 }
