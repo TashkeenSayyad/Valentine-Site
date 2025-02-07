@@ -303,10 +303,3 @@ body::before {
   z-index: -1;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #5a2c8b !important;
-    /* Darker purple for contrast */
-    color: white !important;
-  }
-}
