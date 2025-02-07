@@ -85,7 +85,7 @@ button {
 }
 
 .yesButton:hover {
-  background: #c2185b;
+  background: #7d3cff;
   transform: scale(1.1);
 }
 
@@ -93,7 +93,7 @@ button {
 .noButton {
   background: white;
   color: #e91e63;
-  border: 2px solid #e91e63;
+  border: 2px solid #7d3cff;
   box-shadow: 0 10px 30px rgba(51, 0, 71, 0.874);
 }
 
