@@ -100,7 +100,7 @@ button {
   transform: none;
 }
 
-.loveLetterButton {
+.loveletterButton {
   background: #e91e63;
   color: white;
   font-size: 16px;
@@ -113,7 +113,7 @@ button {
   margin-top: 20px;
 }
 
-.loveLetterButton:hover {
+.loveletterButton:hover {
   background: #e85b92;
   transform: scale(1.05);
 }
