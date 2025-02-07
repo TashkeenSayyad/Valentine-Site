@@ -58,7 +58,7 @@ function createHearts() {
   heartContainer.classList.add("heart-container");
   document.body.appendChild(heartContainer);
 
-  const heartCount = 20; // Adjust the number of hearts here
+  const heartCount = 7; // Adjust the number of hearts here
 
   for (let i = 0; i < heartCount; i++) {
     const heart = document.createElement("span");

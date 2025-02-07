@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Randomize position, delay, and size
     const randomLeft = Math.random() * 100; // % of screen width
-    const randomDelay = 1; // Delay in seconds
+    const randomDelay = 2; // Delay in seconds
     const randomSize = Math.random() * 1.2 + 0.8; // Random scale between 0.6 and 1.8
 
     daisy.style.left = `${randomLeft}vw`;
@@ -47,7 +47,7 @@ function createHearts() {
   heartContainer.classList.add("heart-container");
   document.body.appendChild(heartContainer);
 
-  const heartCount = 7;
+  const heartCount = 4;
 
   for (let i = 0; i < heartCount; i++) {
     const heart = document.createElement("span");
