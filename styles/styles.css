@@ -102,6 +102,24 @@ button {
   transform: none;
 }
 
+.loveLetterButton {
+  background: #e91e63;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.loveLetterButton:hover {
+  background: #e85b92;
+  transform: scale(1.05);
+}
+
 /* Fade-In Animation */
 @keyframes fadeIn {
   0% {
