@@ -11,7 +11,7 @@ body {
   overflow-y: auto;
   padding: 20px;
   position: relative;
-  background-image: url('documents/background.png'),
+  background-image: url('tashkeensayyad.github.io/Valentine-Site/documents/background.png'),
     radial-gradient(circle, rgba(255, 182, 193, 0.8), rgba(183, 94, 255, 0.8));
   background-size: cover;
   background-position: center center;
