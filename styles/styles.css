@@ -3,7 +3,6 @@ body {
   font-family: 'SF Pro Display', sans-serif;
   text-align: center;
   background-color: #b565d9 !important;
-  /* Purple fallback if image fails */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,11 +10,12 @@ body {
   overflow-y: auto;
   padding: 20px;
   position: relative;
-  background-image: url('tashkeensayyad.github.io/Valentine-Site/background.png'),
-    radial-gradient(circle, rgba(255, 182, 193, 0.8), rgba(183, 94, 255, 0.8));
+  background-image: url('background.png'),
+    radial-gradient(circle, rgba(245, 83, 148, 0.8), rgba(153, 55, 234, 0.8));
+  background-color: transparent !important;
   background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Semi-transparent overlay for opacity */
@@ -26,7 +26,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.05);
+  /* background-color: rgba(0, 0, 0, 0.05); */
   /* Semi-transparent black overlay */
   z-index: -1;
   /* Ensures the overlay is behind content */
@@ -34,7 +34,7 @@ body::before {
 
 /* Main Content Container */
 .container {
-  background: rgba(255, 255, 255, 0.25);
+  /* background: rgba(255, 255, 255, 0.25); */
   /* Semi-transparent container */
   padding: 25px;
   border-radius: 20px;
@@ -308,14 +308,6 @@ body::before {
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #5a2c8b !important;
-    /* Darker purple for contrast */
-    color: white !important;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: #8c52cb !important;
     /* Darker purple for contrast */
     color: white !important;
   }
