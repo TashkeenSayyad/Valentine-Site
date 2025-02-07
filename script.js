@@ -51,3 +51,25 @@ document.addEventListener("DOMContentLoaded", () => {
     fireflyContainer.appendChild(firefly);
   }
 });
+
+// Generate random hearts that float across the screen
+function createHearts() {
+  const heartContainer = document.createElement("div");
+  heartContainer.classList.add("heart-container");
+  document.body.appendChild(heartContainer);
+
+  const heartCount = 20; // Adjust the number of hearts here
+
+  for (let i = 0; i < heartCount; i++) {
+    const heart = document.createElement("span");
+    heart.classList.add("heart");
+    heart.innerHTML = "💖"; // You can change this to any heart emoji or symbol
+    heart.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+    heart.style.animationDuration = `${Math.random() * 5 + 5}s`; // Random speed of animation
+    heart.style.animationDelay = `${Math.random() * 10}s`; // Random start delay
+    heartContainer.appendChild(heart);
+  }
+}
+
+// Call the function to generate hearts when the page loads
+window.onload = createHearts;
