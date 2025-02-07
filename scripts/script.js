@@ -30,8 +30,7 @@ function handleNoClick() {
     messageIndex = (messageIndex + 1) % messages.length;
     noClickCount++;
   } else {
-    // Hide the "No" button after the final message
-    noButton.style.visibility = "hidden";
+    window.location.href = "../pages/noPage.html"; // Redirect when messages run out
   }
 
   // Increase the Yes button's font size for a fun effect
@@ -41,7 +40,7 @@ function handleNoClick() {
 
 function handleYesClick() {
   // Redirect to the yes page where the celebration GIF will appear
-  window.location.href = "yesPage.html";
+  window.location.href = "../pages/yesPage.html";
 }
 
 // Firefly effect
