@@ -2,12 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const flowersContainer = document.getElementById("daisyContainer");
 
   const audio = document.getElementById("yesSound");
-  if (audio) {
-    audio.play().catch((error) => {
-      console.error("Audio playback failed:", error);
-      // Optionally, you can add a button for manual playback if autoplay is blocked.
-    });
-  }
+  audio.volume = 1.0; // Adjust volume if needed (0.0 to 1.0)
+  audio.play();
 
   if (flowersContainer) {
     function createDaisy() {
