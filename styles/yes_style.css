@@ -12,6 +12,10 @@ body {
 
 .container {
     text-align: center;
+    min-height: auto;
+    max-height: none;
+    overflow-y: visible;
+    padding-bottom: 50px;
 }
 
 /* Heading */

@@ -37,6 +37,10 @@ body::before {
   max-width: 420px;
   text-align: center;
   transition: all 0.3s ease;
+  min-height: auto;
+  max-height: none;
+  overflow-y: visible;
+  padding-bottom: 50px;
 }
 
 /* Heading */
@@ -56,6 +60,23 @@ h1 {
   gap: 15px;
   margin-top: 20px;
   flex-wrap: wrap;
+}
+
+.backButton {
+  background: white;
+  color: #7d3cff;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid #7d3cff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.backButton:hover {
+  background: #7d3cff;
+  transform: scale(1.05);
 }
 
 /* Button Styling */
@@ -280,25 +301,6 @@ body {
   height: auto;
   min-height: 100vh;
   overflow-y: auto;
-}
-
-/* Make sure the container doesn't force everything into a fixed height */
-.container,
-.letter-container {
-  min-height: auto;
-  max-height: none;
-  overflow-y: visible;
-  padding-bottom: 50px;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
 }
 
 /* Sound Button */
