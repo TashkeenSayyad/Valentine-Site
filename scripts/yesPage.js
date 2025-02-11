@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const flowersContainer = document.getElementById("daisyContainer");
 
   const audio = document.getElementById("yesSound");
-  audio.volume = 1.0; // Adjust volume if needed (0.0 to 1.0)
+  audio.volume = 0.7; // Adjust volume if needed (0.0 to 1.0)
   audio.play();
 
   if (flowersContainer) {
