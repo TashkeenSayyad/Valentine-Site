@@ -79,3 +79,30 @@ function createHearts() {
 
 // Call the function to generate hearts when the page loads
 window.onload = createHearts;
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sparkleContainer = document.querySelector(".sparkle-container");
+
+  function createSparkle() {
+      const sparkle = document.createElement("div");
+      sparkle.classList.add("sparkle");
+
+      // Random position on screen
+      sparkle.style.left = `${Math.random() * 100}vw`;
+      sparkle.style.top = `${Math.random() * 100}vh`;
+
+      // Random animation duration
+      sparkle.style.animationDuration = `${1.5 + Math.random()}s`;
+
+      sparkleContainer.appendChild(sparkle);
+
+      // Remove sparkle after animation
+      setTimeout(() => {
+          sparkle.remove();
+      }, 2000);
+  }
+
+  // Create sparkles every 500ms
+  setInterval(createSparkle, 500);
+});
