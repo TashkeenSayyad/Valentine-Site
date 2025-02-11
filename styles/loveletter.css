@@ -9,7 +9,7 @@ body {
   overflow: hidden;
   padding: 20px;
   background-image: url("https://tashkeensayyad.github.io/Valentine-Site/documents/background.webp"),
-    radial-gradient(circle, rgba(245, 83, 148, 0.8), rgba(153, 55, 234, 0.8));
+    radial-gradient(circle, rgba(136, 53, 207, 0.8), rgba(194, 65, 244, 0.85));
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
