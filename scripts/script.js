@@ -104,5 +104,5 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Create sparkles every 500ms
-  setInterval(createSparkle, 500);
+  setInterval(createSparkle, 50);
 });
